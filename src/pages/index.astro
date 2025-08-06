@@ -7,11 +7,10 @@ import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
 
 const data = await db.select().from(Appointment);
-console.log(data)
 
 ---
 
 
 <Layout>
-	<Main />
+	<Main users={data}/>
 </Layout>
