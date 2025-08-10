@@ -7,6 +7,7 @@ export const GET: APIRoute = async () => {
     status: 200,
     headers: {
       'Content-Type': 'application/json',
+      'Cache-Control': 'no-cache',
     },
   });
 };
