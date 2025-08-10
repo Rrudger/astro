@@ -1,9 +1,21 @@
 
 ---
+import { storedData } from '../store.js';
+import { db, Appointment } from 'astro:db';
+
 
 const { users } = Astro.props;
 const userName = users[0].user;
 
+
+
+
+if (Astro.request.method === 'GET') {
+
+	const data = await db.select().from(Appointment);
+	const user = data[0].user;
+	storedData.set(user)
+}
 ---
 
 
@@ -11,12 +23,25 @@ const userName = users[0].user;
 <div id="container">
 
 	<main>
-		<section class="h-screen bg-accent">
-			{ userName }
+		<section class="h-screen bg-accent grid place-content-center">
+			<div id="dataDiv" class="mb-8">
+				{storedData.get()}
+			</div>
+			<form method="GET">
+			<button type="submit" id='getDataBtn' class="cursor-pointer rounded-xl border border-2 border-primary px-4 py-2
+			transition-transform duration-300 hover:scale-125">
+				 test
+			</button>
+			</form>
 		</section>
 	</main>
 	<script>
-		console.log('console message');
+
+
+
+
+
+
 	</script>
 
 </div>
