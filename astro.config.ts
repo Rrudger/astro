@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import db from "@astrojs/db";
 
 
-import vercel from "@astrojs/vercel";
+import vercel from '@astrojs/vercel/serverless';
 
 
 // https://astro.build/config
