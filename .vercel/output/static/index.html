@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.jpg"><meta name="generator" content="Astro v5.12.1"><title>Astro-MongoDB</title><link rel="stylesheet" href="/_astro/index.Co8hkA04.css"></head> <body data-astro-cid-sckkx6r4>  <div id="container"> <main> <section class="h-screen bg-accent grid place-content-center"> <div id="dataDiv" class="mb-8"> 1111 </div> <form method="GET"> <button type="submit" id="getDataBtn" class="cursor-pointer rounded-xl border border-2 border-primary px-4 py-2
+<!DOCTYPE html><html lang="en" data-astro-cid-sckkx6r4> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.jpg"><meta name="generator" content="Astro v5.12.1"><title>Astro-MongoDB</title><link rel="stylesheet" href="/_astro/index.Co8hkA04.css"></head> <body data-astro-cid-sckkx6r4>  <div id="container"> <main> <section class="h-screen bg-accent grid place-content-center"> <div id="dataDiv" class="mb-8">
+initial value
+</div> <button id="getDataBtn" class="cursor-pointer rounded-xl border border-2 border-primary px-4 py-2
 			transition-transform duration-300 hover:scale-125">
 test
-</button> </form> </section> </main>  </div>  </body></html>
+</button> </section> </main> <script type="module">const e=document.getElementById("getDataBtn");e.addEventListener("click",async()=>{const t=await(await fetch("/api/get")).json();document.getElementById("dataDiv").textContent=t[0].user});</script> </div>  </body></html>

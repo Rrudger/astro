@@ -6,7 +6,7 @@ import "../styles/global.css";
 import Main from '../components/Main.astro';
 import Layout from '../layouts/Layout.astro';
 
-const data = await db.select().from(Appointment);
+
 
 
 
@@ -14,5 +14,5 @@ const data = await db.select().from(Appointment);
 
 
 <Layout>
-	<Main users={data}/>
+	<Main />
 </Layout>
