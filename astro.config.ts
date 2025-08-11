@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 import db from "@astrojs/db";
 
 
-import vercel from '@astrojs/vercel/serverless';
+import awsAmplify from 'astro-aws-amplify';
 
 
 // https://astro.build/config
@@ -15,5 +15,5 @@ export default defineConfig({
    output: 'server',
   vite: {    plugins: [tailwindcss()],  },
   integrations: [db()],
-  adapter: vercel(),
+  adapter: awsAmplify(),
 });
