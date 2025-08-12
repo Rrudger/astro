@@ -27,6 +27,7 @@ import { storedData } from '../store.js';
 	const button = document.getElementById('getDataBtn')
 	button.addEventListener('click', async () => {
 		 const res = await fetch('/api/get');
+		 console.log(res)
 		 const data = await res.json();
 		 document.getElementById('dataDiv').textContent =  data[0].user;
 
